@@ -1,0 +1,7 @@
+jobx:
+    runs-on: ubuntu-latest
+    steps:
+      - name: configuração do node (pesquisar no marketplace...)
+        uses: ???
+      - name: verification of node version
+        run: node --version

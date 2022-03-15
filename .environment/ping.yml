@@ -1,4 +1,3 @@
---
 - name: Run connection tests
   hosts: localhost
 
@@ -10,4 +9,3 @@
     - name: show results
       debug:
         msg: '{{ resultado }}'
-

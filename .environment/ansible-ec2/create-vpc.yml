@@ -1,0 +1,15 @@
+---
+- name: Criação de VPC, Subnet, Internet gateway, Route table, Security group
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  become: true
+  vars_files:
+    - vars/global.yml
+    - vars/vpc.yml
+
+  environment:
+    AWS_ACCESS_KEY_ID: "{{ lookup('env', 'ASIAQC2PIEBOPC3YL3J5') }}"
+    AWS_SECRET_ACCESS_KEY: "{{ lookup('env', 'wqvT83WiJ84fcU1jzF1wfVqS0aS7lp62D/C03a+4') }}"
+    AWS_SESSION_TOKEN: "{{ lookup('env', 'FwoGZXIvYXdzEO3//////////wEaDKDPgNEi7GRkQzqFdiK9AXVY8RJXakjYu8NprmJZN/PZZRUKZiBsJ8crnA3VGr3Y5UXWaMVOxXRWVfbGf1ZvsDmV12D7NGqhe8A9+LI5ZNFjNQo2XF2GYqTM/bGSRNjE/cZEMdHgdmj1AyJ81ZrSHHHFgDu56pMoNpSBRK6ngTB0VmyqSWaZ6a68zMTpfUfSxjVZBAf+kyPZULtxJ/mykWy46lUofAdKXo1Jq+i3XekyG29/iaPLRQlP6ZHnuGTTVvYR81n1v9M6rT51cij3tquSBjItLfOPPl5fStV2GbqTOPik9Kdv7yAM7iO+6xf5J/PZYd70xnUTlKdcwMGW6CH1') }}"
+
